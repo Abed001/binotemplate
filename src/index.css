@@ -79,7 +79,7 @@
 body {
   padding:0;
   margin:0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OpenSans', sans-serif;
 }
 
 @media (max-width:765px) {
@@ -93,3 +93,35 @@ body {
       display: none;
     }
   }
+
+  .container {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E74E3E;
+    position: relative;
+}
+
+.dot::before,
+.dot::after {
+    content: '';
+    width: 70px;
+    height: 0.5px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot::before {
+    left: -90px; /* 50px width + 5px margin */
+}
+
+.dot::after {
+    right: -90px; /* 50px width + 5px margin */
+}

@@ -18,7 +18,7 @@ function header() {
     <>
 
 
-      <div className='w-[100%] h-3 absolute top-5 right-[-3px] mt-2 ml-10 z-20 lg:hidden flex justify-between items-center p-5'>
+      <div className=' w-[100%] h-3 absolute top-5 right-[-3px] mt-2 ml-10 z-20 lg:hidden flex justify-between items-center p-5'>
         <img className=' max-w-[100px]' src={logo} alt="logo" />
 
         <Hamburger color='#ffff' easing="ease-in" size={20} duration={0.3} toggled={isOpen} toggle={setOpen} />
