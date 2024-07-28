@@ -77,8 +77,8 @@
 @tailwind utilities;
 
 body {
-  padding:0;
-  margin:0;
+  padding:0px;
+  margin:0px;
   font-family: 'OpenSans', sans-serif;
 }
 
@@ -125,3 +125,43 @@ body {
 .dot::after {
     right: -90px; /* 50px width + 5px margin */
 }
+
+.dot::before,
+.dot::after {
+    content: '';
+    width: 70px;
+    height: 0.5px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.icon-content {
+  /* Style your icon here */
+}
+
+.border-square {
+  padding:30px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000; /* Adjust border style as needed */
+  transition: transform 0.5s ease-in-out; /* Add transition for smooth rotation */
+}
+
+.icon-wrapper:hover .border-square {
+  transform: rotate(45deg);
+  border: 1px solid #E74E3E;
+}
+
+.icon-wrapper:hover .textbrickred ,.icon-content{
+  color:#E74E3E;
+  transition-duration: 1s;
+
+}
+
+
