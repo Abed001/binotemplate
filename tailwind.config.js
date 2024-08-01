@@ -76,6 +76,7 @@ export default {
   theme: {
 
     colors: {
+      'black-rgba': 'rgba(0, 0, 0, 0.54)',
       brickred: '#E74E3E',
       white: '#fff',
       purple: '#8A56F7',

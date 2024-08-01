@@ -4,7 +4,7 @@ import servicerightimg from '/images/servicerightimg.jpg'
 import { FcLike } from "react-icons/fc";
 function Aboutus() {
   return (
-    <section className='pt-[10%]'>
+    <section className=' pt-[10%]'>
       <div className='  w-[100%] flex flex-col justify-center md:justify-center lg:flex-row lg:justify-between '>
         <div className='flex-1 mb-10 md:flex md:justify-center md:mb-10 lg:mb-0'>
           <img src={stab1} alt="pc photo" />

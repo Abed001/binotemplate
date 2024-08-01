@@ -60,9 +60,6 @@ export function CarouselDemo() {
                   <div className="text-[0.7rem] mt-5 flex justify-between text-white font-bold min-w-[300px] ">
                     {slide.buttons.map((button, index) => (
                       <button key={index} className={button.style}>{button.text}</button>
-
-
-
                     ))}
                   </div>
 
