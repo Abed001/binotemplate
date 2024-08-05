@@ -40,7 +40,7 @@ const slides = [
   },
 
 ];
-export function CarouselDemo() {
+const CarouselDemo = () => {
   return (
     <Carousel className=" text-white w-[80%]">
       <CarouselContent>
@@ -78,3 +78,4 @@ export function CarouselDemo() {
     </Carousel>
   )
 }
+export default CarouselDemo;

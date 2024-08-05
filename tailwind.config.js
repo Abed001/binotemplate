@@ -89,7 +89,8 @@ export default {
       lightgrey: "#A3A3A3",
       grayishblue: "#bdc5cc",
       footerblack: '#373737',
-      onyx: '#11151c'
+      onyx: '#11151c',
+      ivory:'#F8F0FF'
 
 
     },

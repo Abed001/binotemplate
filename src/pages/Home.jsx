@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from "../components/Header"
-import { CarouselDemo } from '@/components/demo/CarouselDemo'
+import CarouselDemo from '@/components/demo/CarouselDemo.jsx';
 import { FaArrowDown } from "react-icons/fa";
 import { FaRegClone } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
@@ -15,7 +15,7 @@ function Home() {
     <div className='black-overlay relative border-4 border-purple mb-80 h-[100vh] bg-homelg bg-center lg:bg-bottom bg-cover bg-no-repeat ' >
  
 
-      <div className='fixed z-40'>  <Header /></div>
+      <div className='fixed z-40'> <Header/></div>
 
 
       <div className='pt-20 md:pt-40 lg:pt-0 lg:mt-40 flex justify-center'>
@@ -96,4 +96,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
