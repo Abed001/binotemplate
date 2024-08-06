@@ -38,7 +38,7 @@ const slides = [
 
 function CarouselPortfolio() {
     return (
-        <Carousel className="border-4 border-brickred h-[80vh] flex items-center  bg-white opacity-80 lg:opacity-100  text-white max-w-[350px] lg:max-w-[90vh]">
+        <Carousel className="border-4 border-brickred h-[60vh] lg:h-[80vh] flex items-center  bg-white opacity-80 lg:opacity-100  text-white max-w-[350px] lg:max-w-[80vh]">
             <CarouselContent>
                 {slides.map((slide, index) => (
                     <CarouselItem className=" flex flex-col justify-center items-center text-grey" key={index}>
@@ -46,7 +46,7 @@ function CarouselPortfolio() {
                             <Card className="border-0">
                                 <CardContent className=" h-full flex flex-col  items-center justify-center p-6">
                                     {/*card*/}
-                                    <section className=' icon-wrapper mt-5 flex flex-col items-center gap-y-10 '>
+                                    <section className=' icon-wrapper mt-5 flex flex-col items-center gap-y-2 lg:gap-y-10 '>
                                         <div className=" icon-wrapper ">
                                             <div className="icon-content">
                                                 <FaRegLightbulb />

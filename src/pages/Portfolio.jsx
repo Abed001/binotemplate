@@ -64,12 +64,12 @@ function Portfolio() {
                     </div>
 
                     {/*small screen*/}
-                    <div className='lg:hidden bg-ivory h-[100vh] flex flex-col justify-center items-center mb-40 '>
-                        <div className='flex flex-col justify-center items-center'>
+                    <div className='relative w-[100%] lg:hidden bg-ivory  flex flex-col justify-center items-center mb-40 '>
+                        <div className='absolute flex flex-col justify-center items-center'>
                             <CarouselPortfolio />
                         </div>
 
-                        <img className='w-[200px] h-[200px] object-center object-cover object-no-repeat ' src={study} alt="study" />
+                        <img className='w-full object-center object-cover object-no-repeat ' src={study} alt="study" />
                     </div>
                 </div>
 
