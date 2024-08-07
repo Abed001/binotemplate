@@ -38,7 +38,7 @@ const slides = [
 
 function CarouselPortfolio() {
     return (
-        <Carousel className="border-4 border-brickred h-[60vh] lg:h-[80vh] flex items-center  bg-white opacity-80 lg:opacity-100  text-white max-w-[350px] lg:max-w-[80vh]">
+        <Carousel className=" h-[100%] md:h-[45vh] lg:h-[80vh] flex items-center  bg-white opacity-80 md:opacity-100 lg:opacity-100  text-white max-w-[350px] md:max-w-[40vh] lg:max-w-[80vh]">
             <CarouselContent>
                 {slides.map((slide, index) => (
                     <CarouselItem className=" flex flex-col justify-center items-center text-grey" key={index}>

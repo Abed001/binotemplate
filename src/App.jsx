@@ -18,7 +18,7 @@ function App() {
         <Aboutus />
       </div>
 
-      <div  className='mb-[200px] lg:mb-40'>
+      <div  className='mb-[200px] lg:mb-20'>
         <Portfolio />
       </div>
 

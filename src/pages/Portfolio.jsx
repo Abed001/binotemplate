@@ -43,9 +43,9 @@ function Portfolio() {
 
             </div>
 
-            <div className='border-4 border-purple bg-ivory  flex flex-col w-[100%] justify-center items-center'>
+            <div className='mt-[10%] lg:mt-[-2%] bg-ivory  flex flex-col w-[100%] justify-center items-center'>
 
-                <div className='border-4 relative gap-y-5 flex flex-col lg:w-[100%] justify-center items-center'>
+                <div className=' relative gap-y-5 flex flex-col md:[100%] lg:w-[100%] justify-center items-center'>
                     <p className='pt-20 font-bold text-4xl uppercase text-grey'>case study</p>
                     <p className='max-w-[70%] text-center text-[1rem] text-grey'>A brief story about how this process works, keep an eye till the end.</p>
 
@@ -55,16 +55,16 @@ function Portfolio() {
                     </div>
 
                     {/*large screen*/}
-                    <div className='hidden-on-phone bg-ivory h-[100vh]  w-[100%] lg:flex mb-40 '>
-                        <div className=' z-40 absolute top-80 lg:left-60'>
+                    <div className='hidden-on-phone bg-ivory md:h-[55vh] lg:h-[100vh]  w-[100%] md:flex lg:flex '>
+                        <div className=' z-40 absolute md:top-80 md:right-[20%] lg:top-80  lg:right-[40%]'>
                             <CarouselPortfolio />
                         </div>
 
-                        <img className='h-[100vh] min-w-[40%] z-20 absolute lg:right-40' src={study} alt="study" />
+                        <img className='z-20 absolute md:left-[20%] md:max-w-[40vh] lg:h-[100vh] lg:max-w-[80vh]  lg:left-[40%]' src={study} alt="study" />
                     </div>
 
                     {/*small screen*/}
-                    <div className='relative w-[100%] lg:hidden bg-ivory  flex flex-col justify-center items-center mb-40 '>
+                    <div className='relative w-[100%] lg:hidden md:hidden bg-ivory  flex flex-col justify-center items-center  '>
                         <div className='absolute flex flex-col justify-center items-center'>
                             <CarouselPortfolio />
                         </div>
