@@ -96,6 +96,7 @@ export default {
     },
     backgroundImage: {
       'homelg': "url('/images/homebg.jpg')",
+      'portbg': "url('/images/counterbg.jpg')",
     },
     extend: {
 

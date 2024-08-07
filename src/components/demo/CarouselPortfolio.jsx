@@ -46,16 +46,16 @@ function CarouselPortfolio() {
                             <Card className="border-0">
                                 <CardContent className=" h-full flex flex-col  items-center justify-center p-6">
                                     {/*card*/}
-                                    <section className=' icon-wrapper mt-5 flex flex-col items-center gap-y-2 lg:gap-y-10 '>
-                                        <div className=" icon-wrapper ">
-                                            <div className="icon-content">
-                                                <FaRegLightbulb />
+                                    <section className=' icon-wrapperport mt-5 flex flex-col items-center  gap-y-5 lg:gap-y-10 '>
+                                        <div className=" icon-wrapperport ">
+                                            <div className=" icon-wrapperport">
+                                                <FaRegLightbulb className='absolute z-20' color='white' />
                                             </div>
-                                            <div className="border-square absolute -top-6 -left-6"></div>
+                                            <div className="border-squareport absolute -top-6 -left-6"></div>
                                         </div>
-                                        <p className='textbrickred uppercase mt-5 font-bold'>creative ideas</p>
+                                        <p className='text-brickred uppercase mt-10 lg:mt-5 font-bold'>creative ideas</p>
                                         <div className="w-[50px] rounded-md border-b-4 border-grey"> </div>
-                                        <p className='min-w-60 text-center text-[0.7rem] leading-10'>Lorem ipsum dolor sit ame pariatur ipsa assumenda expedita numquam, quas eligendi optio mag
+                                        <p className='min-w-60 text-center text-[0.7rem] leading-5 lg:leading-10'>Lorem ipsum dolor sit ame pariatur ipsa assumenda expedita numquam, quas eligendi optio mag
                                             Lorem ipsum dolor sit ame pariatur ipsa assumenda expedita numquam, quas eligendi optio mag
                                             Lorem ipsum dolor sit ame pariatur ipsa assumenda expedita numquam, quas eligendi optio mag.
                                         </p>

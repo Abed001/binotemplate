@@ -3,6 +3,42 @@ import { GalleryData } from "../GalleryData";
 import study from '/images/study.jpg'
 import CarouselPortfolio from '@/components/demo/CarouselPortfolio.jsx';
 
+
+
+
+const icons = [
+    {
+        image: "./images/like.png",
+        number: "200",
+        description: "user favourites",
+
+    },
+    {
+        image: "./images/coffee.png",
+        number: "200",
+        description: "amazing features",
+
+
+    },
+    {
+        image: "./images/medal.png",
+        number: "200",
+        description: "posts last year",
+
+
+    },
+    {
+        image: "./images/team.png",
+        number: "200",
+        description: "total posts",
+
+
+    },
+];
+
+
+
+
 function Portfolio() {
     const [data, setData] = useState([]);
 
@@ -43,7 +79,7 @@ function Portfolio() {
 
             </div>
 
-            <div className='mt-[10%] lg:mt-[-2%] bg-ivory  flex flex-col w-[100%] justify-center items-center'>
+            <div className='pb-20 mt-[10%] lg:mt-[-2%] bg-ivory  flex flex-col w-[100%] justify-center items-center'>
 
                 <div className=' relative gap-y-5 flex flex-col md:[100%] lg:w-[100%] justify-center items-center'>
                     <p className='pt-20 font-bold text-4xl uppercase text-grey'>case study</p>
@@ -56,11 +92,11 @@ function Portfolio() {
 
                     {/*large screen*/}
                     <div className='hidden-on-phone bg-ivory md:h-[55vh] lg:h-[100vh]  w-[100%] md:flex lg:flex '>
-                        <div className=' z-40 absolute md:top-80 md:right-[20%] lg:top-80  lg:right-[40%]'>
+                        <div className=' z-20 absolute md:top-80 md:right-[20%] lg:top-80  lg:right-[40%]'>
                             <CarouselPortfolio />
                         </div>
 
-                        <img className='z-20 absolute md:left-[20%] md:max-w-[40vh] lg:h-[100vh] lg:max-w-[80vh]  lg:left-[40%]' src={study} alt="study" />
+                        <img className=' z-10 absolute md:left-[20%] md:max-w-[40vh] lg:h-[100vh] lg:max-w-[80vh]  lg:left-[40%]' src={study} alt="study" />
                     </div>
 
                     {/*small screen*/}
@@ -73,11 +109,19 @@ function Portfolio() {
                     </div>
                 </div>
 
+            </div>
+            <div className='p-10 flex flex-col md:flex-row lg:flex-row justify-between md:justify-around lg:justify-around mb-60 h-[100%] w-full bg-portbg bg-cover bg-center bg-no-repeat mt-[10%] md:mt-[5%] lg:mt-[5%]'>
+                {icons.map((icon, index) => (
+                    <div className='mb-20 text-white flex flex-col justify-center items-center md:gap-y-5 lg:gap-y-5 '>
+                        <div className="p-10 aspect-square w-[40%] md:w-[60%] lg:w-[40%] border-2 border-white rounded-full flex justify-center items-center">
+                            <img className=" object-cover object-center object-no-repeat" src={icon.image} />
 
+                        </div>
+                        <p className='mt-5 mb-2 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0 font-bold text-4xl'>{icon.number}</p>
+                        <p className='font-bold' >{icon.description}</p>
 
-
-
-
+                    </div>
+                ))}
 
             </div>
         </div >

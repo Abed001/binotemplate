@@ -45,7 +45,7 @@ function header() {
 
 
         <div className='bg-blackc/2 w-[100%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet '>
-          <div className='border-4 border-purple items-center justify-between w-[100%] mx-40 flex '>
+          <div className=' border-4 border-purple items-center justify-between w-[100%] mx-40 flex '>
             <img className=' max-w-[100px]' src={logo} alt="logo" />
             <ul className='text-white cursor-pointer uppercase flex   gap-x-5 '>
               <a href="#link1" onClick={() => handleLinkClick('link1')} className={`${selectedLink === 'link1' ? 'border-b-2 border-brickred text-brickred h-[40px] transition-all duration-500' : ''}`}>Home</a>
