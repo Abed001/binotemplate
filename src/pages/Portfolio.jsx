@@ -79,9 +79,9 @@ function Portfolio() {
 
             </div>
 
-            <div className='pb-20 mt-[10%] lg:mt-[-2%] bg-ivory  flex flex-col w-[100%] justify-center items-center'>
+            <div className=' mt-[10%] lg:mt-[-2%] bg-ivory flex flex-col w-[100%] h-[100%] justify-center items-center'>
 
-                <div className=' relative gap-y-5 flex flex-col md:[100%] lg:w-[100%] justify-center items-center'>
+                <div className=' relative gap-y-5 flex flex-col lg:w-[100%] justify-center items-center'>
                     <p className='pt-20 font-bold text-4xl uppercase text-grey'>case study</p>
                     <p className='max-w-[70%] text-center text-[1rem] text-grey'>A brief story about how this process works, keep an eye till the end.</p>
 
@@ -91,7 +91,7 @@ function Portfolio() {
                     </div>
 
                     {/*large screen*/}
-                    <div className='hidden-on-phone bg-ivory md:h-[55vh] lg:h-[100vh]  w-[100%] md:flex lg:flex '>
+                    <div className=' mb-20 hidden-on-phone bg-ivory md:h-[55vh] lg:h-[100vh]  w-[100%] md:flex lg:flex '>
                         <div className=' z-20 absolute md:top-80 md:right-[20%] lg:top-80  lg:right-[40%]'>
                             <CarouselPortfolio />
                         </div>
@@ -100,17 +100,20 @@ function Portfolio() {
                     </div>
 
                     {/*small screen*/}
-                    <div className='relative w-[100%] lg:hidden md:hidden bg-ivory  flex flex-col justify-center items-center  '>
+                    <div className='mb-20 relative w-[100%] lg:hidden md:hidden bg-ivory  flex flex-col justify-center items-center  '>
                         <div className='absolute flex flex-col justify-center items-center'>
                             <CarouselPortfolio />
                         </div>
 
                         <img className='w-full object-center object-cover object-no-repeat ' src={study} alt="study" />
+                        
                     </div>
+                  
                 </div>
 
             </div>
-            <div className='p-10 flex flex-col md:flex-row lg:flex-row justify-between md:justify-around lg:justify-around mb-60 h-[100%] w-full bg-portbg bg-cover bg-center bg-no-repeat mt-[10%] md:mt-[5%] lg:mt-[5%]'>
+           
+            <div className=' p-10 flex flex-col md:flex-row lg:flex-row justify-between md:justify-around lg:justify-around h-[100%] w-full bg-portbg bg-cover bg-center bg-no-repeat '>
                 {icons.map((icon, index) => (
                     <div className='mb-20 text-white flex flex-col justify-center items-center md:gap-y-5 lg:gap-y-5 '>
                         <div className="p-10 aspect-square w-[40%] md:w-[60%] lg:w-[40%] border-2 border-white rounded-full flex justify-center items-center">

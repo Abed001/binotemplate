@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Home from "./pages/Home"
 import Aboutus from './pages/Aboutus'
 import Portfolio from './pages/Portfolio'
+import Pricing from './pages/Pricing'
 
 function App() {
 
@@ -18,8 +19,12 @@ function App() {
         <Aboutus />
       </div>
 
-      <div  className='mb-[200px] lg:mb-20'>
+      <div className=''>
         <Portfolio />
+      </div>
+
+      <div  className='mb-[200px] lg:mb-20'>
+        <Pricing />
       </div>
 
     </div>
