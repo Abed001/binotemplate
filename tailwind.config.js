@@ -74,7 +74,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
+    screens: {
+      
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px', // For larger screens
+    },
     colors: {
       'black-rgba': 'rgba(0, 0, 0, 0.54)',
       brickred: '#E74E3E',
@@ -87,11 +94,11 @@ export default {
       grey: '#4E4E4E',
       liner: '#2159DC',
       lightgrey: "#A3A3A3",
-      lightergrey:"#F3F3F3",
+      lightergrey: "#F3F3F3",
       grayishblue: "#bdc5cc",
       footerblack: '#373737',
       onyx: '#11151c',
-      ivory:'#F8F0FF'
+      ivory: '#F8F0FF'
 
 
     },

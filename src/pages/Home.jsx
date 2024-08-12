@@ -18,7 +18,7 @@ function Home() {
       <div className='fixed z-40'> <Header/></div>
 
 
-      <div className='pt-20 md:pt-40 lg:pt-0 lg:mt-40 flex justify-center'>
+      <div className='pt-20 md:pt-40 lg:pt-0 lg:mt-40 2xl:mt-[15%] flex justify-center'>
         <CarouselDemo />
       </div>
      
@@ -26,7 +26,7 @@ function Home() {
         < FaArrowDown className='hover:translate-y-2 transition-all duration-500 cursor-pointer text-brickred bg-lightgrey h-[40px] w-[40px] p-2 rounded-full' />
       </div>
       
-      <div className=' mt-[50vh] md:mt-[50vh] lg:mt-[30vh] justify-evenly text-grey w-[100%] gap-y-5 flex flex-col md:flex-row lg:flex-row lg:gap-x-5 '>
+      <div className=' mt-[50vh] md:mt-[45vh] lg:mt-[30vh] 2xl:mt-[50vh] justify-evenly text-grey w-[100%] gap-y-5 flex flex-col md:flex-row lg:flex-row lg:gap-x-5 '>
 
 
         {/*card*/}
