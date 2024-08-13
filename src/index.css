@@ -164,9 +164,6 @@ body {
 
 }
 
-
-
-
 .black-overlay {
   background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url('/images/homebg.jpg');
   background-size: cover;
@@ -220,4 +217,3 @@ body {
 .neon-button {
   box-shadow:  0 0 30px #fff ;
 }
-
