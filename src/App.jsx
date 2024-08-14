@@ -18,11 +18,11 @@ function App() {
         <Aboutus />
       </div>
 
-      <div className=''>
+      <div  id="link3">
         <Portfolio />
       </div>
 
-      <div  className='mb-[200px] lg:mb-20'>
+      <div id="link4" className='mb-[200px] lg:mb-20'>
         <Pricing />
       </div>
 
