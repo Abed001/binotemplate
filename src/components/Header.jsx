@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef,useEffect } from 'react'
 import { Pivot as Hamburger } from 'hamburger-react'
 import logo from '/images/logo.png'
 import { motion } from "framer-motion"
 import ScrollIntoView from 'react-scroll-into-view'
 
 function header() {
+
   const [isOpen, setOpen] = useState(false)
   const [selectedLink, setSelectedLink] = useState('link1')
 

@@ -105,6 +105,8 @@ export default {
     backgroundImage: {
       'homelg': "url('/images/homebg.jpg')",
       'portbg': "url('/images/counterbg.jpg')",
+      'teambg': "url('/images/teambg.jpg')",
+      'teambg2': "url('/images/teambg2.png')",
     },
     extend: {
 
