@@ -260,6 +260,12 @@ body {
 .neon-button {
   box-shadow:  0 0 30px #fff ;
 }
-.top{
-  align-items:top;
+
+.image-container img {
+  transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+  border: 2px solid #ccc;
 }
