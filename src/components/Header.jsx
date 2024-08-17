@@ -51,11 +51,7 @@ function header() {
             </ScrollIntoView>
 
             <ScrollIntoView selector="#link6">
-              <p href="#link6" onClick={() => handleLinkClick('link6')} className={`${selectedLink === 'link6' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>blog</p>
-            </ScrollIntoView >
-
-            <ScrollIntoView selector="#link7">
-              <p href="#link7" onClick={() => handleLinkClick('link7')} className={`${selectedLink === 'link7' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>contact</p>
+              <p href="#link6" onClick={() => handleLinkClick('link6')} className={`${selectedLink === 'link6' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>contact</p>
             </ScrollIntoView >
 
           </ul >
@@ -109,15 +105,10 @@ function header() {
             <ScrollIntoView selector="#link6">
               <p href="#link6"
                 onClick={() => handleLinkClick('link6')}
-                className={`${selectedLink === 'link6' ? 'border-b-2 border-brickred text-brickred h-[40px]  transition-all duration-500' : ''}`}>blog
+                className={`${selectedLink === 'link6' ? 'border-b-2 border-brickred text-brickred h-[40px]  transition-all duration-500' : ''}`}>contact
               </p></ScrollIntoView>
 
-            <ScrollIntoView selector="#link6">
-              <p href="#link7"
-                onClick={() => handleLinkClick('link7')}
-                className={`${selectedLink === 'link7' ? 'border-b-2 border-brickred text-brickred h-[40px]  transition-all duration-500' : ''}`}>contact
-              </p>
-            </ScrollIntoView>
+           
           </ul>
         </div>
 

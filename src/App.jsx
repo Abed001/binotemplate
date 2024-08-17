@@ -4,6 +4,8 @@ import Aboutus from './pages/Aboutus'
 import Portfolio from './pages/Portfolio'
 import Pricing from './pages/Pricing'
 import Team from './pages/Team'
+import Contact from './pages/Contact'
+import Footer from './components/Footer'
 import Loading from './components/preloader/Loading'
 
 
@@ -53,8 +55,16 @@ function App() {
         <Pricing />
       </div>
 
-      <div id="link4" className='mb-[200px] lg:mb-60'>
+      <div id="link5" className='mb-[200px] lg:mb-10'>
         <Team />
+      </div>
+
+      <div id="link6" className='mb-[200px] lg:mb-60'>
+        <Contact />
+      </div>
+
+      <div className='mb-[200px] lg:mb-60'>
+        <Footer />
       </div>
 
     </div>
