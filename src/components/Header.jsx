@@ -1,12 +1,11 @@
-import React, { useState, useRef,useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Pivot as Hamburger } from 'hamburger-react'
 import logo from '/images/logo.png'
 import { motion } from "framer-motion"
 import ScrollIntoView from 'react-scroll-into-view'
 
 function header() {
-
-  const [isOpen, setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(false)
   const [selectedLink, setSelectedLink] = useState('link1')
 
   const handleLinkClick = (link) => {
@@ -15,11 +14,12 @@ function header() {
   }
   const Ref = useRef(null);
   const ref = useRef(null);
+
   return (
-    <>
 
+    <header>
 
-      <div className=' w-[100%] h-3 fixed top-5 right-[-3px] mt-2 ml-10 z-20 lg:hidden flex justify-between items-center p-5'>
+      <div className='w-[100%] h-3 fixed top-5 right-[-3px] mt-2 ml-10 z-20 lg:hidden flex justify-between items-center p-5'>
         <img className=' max-w-[100px]' src={logo} alt="logo" />
 
         <Hamburger color='#ffff' easing="ease-in" size={20} duration={0.3} toggled={isOpen} toggle={setOpen} />
@@ -61,7 +61,7 @@ function header() {
 
 
 
-      <div className='bg-blackc/2 w-[100%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet '>
+      <div className='bg-blackc/2 w-[100%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet'>
         <div className=' border-4 border-purple items-center justify-between w-[100%] mx-40 flex '>
           <img className=' max-w-[100px]' src={logo} alt="logo" />
           <ul className='text-white cursor-pointer uppercase flex gap-x-5 '>
@@ -108,13 +108,13 @@ function header() {
                 className={`${selectedLink === 'link6' ? 'border-b-2 border-brickred text-brickred h-[40px]  transition-all duration-500' : ''}`}>contact
               </p></ScrollIntoView>
 
-           
+
           </ul>
         </div>
 
-      </div>
+      </div >
 
-    </>
+    </header >
   )
 }
 
