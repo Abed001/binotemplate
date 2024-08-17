@@ -55,15 +55,15 @@ function App() {
         <Pricing />
       </div>
 
-      <div id="link5" className='mb-[200px] lg:mb-10'>
+      <div id="link5" className='mb-[50px]'>
         <Team />
       </div>
 
-      <div id="link6" className='mb-[200px] lg:mb-60'>
+      <div id="link6" className=''>
         <Contact />
       </div>
 
-      <div className='mb-[200px] lg:mb-60'>
+      <div className=''>
         <Footer />
       </div>
 

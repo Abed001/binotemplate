@@ -107,6 +107,7 @@ export default {
       'portbg': "url('/images/counterbg.jpg')",
       'teambg': "url('/images/teambg.jpg')",
       'teambg2': "url('/images/teambg2.png')",
+      'footerbg': "url('/images/trailbg.jpg')",
     },
     extend: {
 
