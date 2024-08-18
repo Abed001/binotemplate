@@ -280,3 +280,8 @@ body {
   transform: translateY(-5px);
 }
 
+.navbar-scroll {
+  background-color: #333; /* Set your desired background color */
+  padding: 15px; /* Set your desired padding */
+  /* Add additional styles for the scrolled state */
+}

@@ -3,17 +3,34 @@ import { Pivot as Hamburger } from 'hamburger-react'
 import logo from '/images/logo.png'
 import { motion } from "framer-motion"
 import ScrollIntoView from 'react-scroll-into-view'
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 function header() {
-    const [isOpen, setOpen] = useState(false)
+  const [scrolling, setScrolling] = useState(false);
+  const [isOpen, setOpen] = useState(false)
   const [selectedLink, setSelectedLink] = useState('link1')
+  const Ref = useRef(null);
+  const ref = useRef(null);
+
 
   const handleLinkClick = (link) => {
     setSelectedLink(link)
     setOpen(false)
   }
-  const Ref = useRef(null);
-  const ref = useRef(null);
+
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
 
@@ -61,8 +78,8 @@ function header() {
 
 
 
-      <div className='bg-blackc/2 w-[100%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet'>
-        <div className=' border-4 border-purple items-center justify-between w-[100%] mx-40 flex '>
+<div className={`bg-blackc/2 w-[100%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet ${scrolling ? 'navbar-scroll' : ''}`}>
+        <div className=' items-center justify-between w-[100%] mx-40 flex '>
           <img className=' max-w-[100px]' src={logo} alt="logo" />
           <ul className='text-white cursor-pointer uppercase flex gap-x-5 '>
 

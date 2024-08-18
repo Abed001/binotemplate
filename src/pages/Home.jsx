@@ -12,7 +12,7 @@ import { FaRegComments } from "react-icons/fa";
 function Home() {
   return (
 
-    <div className='black-overlay relative border-4 border-purple mb-80 h-[100vh] bg-homelg bg-center lg:bg-bottom bg-cover bg-no-repeat ' >
+    <div className='black-overlay relative border-[0.5px] mb-80 h-[100vh] bg-homelg bg-center lg:bg-bottom bg-cover bg-no-repeat ' >
  
 
       <div className='fixed z-40'> <Header/></div>
