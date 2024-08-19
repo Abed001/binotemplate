@@ -1,9 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import { Pivot as Hamburger } from 'hamburger-react'
 import logo from '/images/logo.png'
 import { motion } from "framer-motion"
 import ScrollIntoView from 'react-scroll-into-view'
 import { Link, animateScroll as scroll } from 'react-scroll';
+
+
 
 function header() {
   const [scrolling, setScrolling] = useState(false);
@@ -19,8 +21,9 @@ function header() {
   }
 
   const handleScroll = () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 200) {
       setScrolling(true);
+      $('#myElement').addClass('fadeIn');
     } else {
       setScrolling(false);
     }
@@ -39,14 +42,14 @@ function header() {
       <div className='w-[100%] h-3 fixed top-5 right-[-3px] mt-2 ml-10 z-20 lg:hidden flex justify-between items-center p-5'>
         <img className=' max-w-[100px]' src={logo} alt="logo" />
 
-        <Hamburger color='#ffff' easing="ease-in" size={20} duration={0.3} toggled={isOpen} toggle={setOpen} />
+        <Hamburger color='#fff' easing="ease-in" size={20} duration={0.3} toggled={isOpen} toggle={setOpen} />
 
       </div>
       {isOpen &&
         <motion.div transition={{ duration: 0.7, ease: "easeInOut" }} initial={{ opacity: 0 }}
           animate={{ x: -5, opacity: 1 }} exit={{ opacity: 0 }} className='w-[50%] flex justify-start fixed z-10 top-5 right-0 h-[70vh]'>
 
-          <ul ref={ref} className=' font-semibold tracking-tighter lg:hidden  bg-brickred text-white cursor-pointer uppercase flex flex-col items-center gap-y-5 py-20 w-[100%] '>
+          <ul ref={ref} className=' font-semibold tracking-tighter lg:hidden  bg-brickred text-white cursor-pointer uppercase flex flex-col items-center py-20 w-[100%] gap-y-5 md:gap-y-10 md:text-[1.7rem]    '>
             <ScrollIntoView selector="#link1">
               <p href="#link1" onClick={() => handleLinkClick('link1')} className={`${selectedLink === 'link1' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>Home</p>
             </ScrollIntoView>
@@ -77,8 +80,7 @@ function header() {
       }
 
 
-
-<div className={`bg-blackc/2 w-[100%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet ${scrolling ? 'navbar-scroll' : ''}`}>
+      <div id="myElement" className={`ml-8 rounded-full bg-blackc/2 w-[95%] font-semibold tracking-tighter fixed top-10 flex justify-between hidden-on-phone hidden-on-tablet ${scrolling ? 'navbar-scroll top-2' : ''}`}>
         <div className=' items-center justify-between w-[100%] mx-40 flex '>
           <img className=' max-w-[100px]' src={logo} alt="logo" />
           <ul className='text-white cursor-pointer uppercase flex gap-x-5 '>
@@ -130,6 +132,7 @@ function header() {
         </div>
 
       </div >
+
 
     </header >
   )

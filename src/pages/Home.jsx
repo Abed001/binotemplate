@@ -6,26 +6,44 @@ import { FaRegClone } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegLightbulb } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa";
+import gsap from 'gsap';
+import { useLayoutEffect, useRef } from "react"
 
-{/*<div className=' h-screen relative bg-blackc/60'> */ }
 
 function Home() {
+
+  const comp = useRef(null)
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline()
+       t1.from(["#carousel"], {
+          opacity: 0,
+          yPercent: -100,
+          duration: 1,
+          delay: 0.1,
+          stagger: 0.1,
+        })
+        
+    }, comp)
+    return () => ctx.revert()
+  }, [])
   return (
 
-    <div className='black-overlay relative border-[0.5px] mb-80 h-[100vh] bg-homelg bg-center lg:bg-bottom bg-cover bg-no-repeat ' >
- 
-
-      <div className='fixed z-40'> <Header/></div>
+    <div  className='black-overlay relative border-[0.5px] mb-80 h-[100vh] bg-homelg bg-center lg:bg-bottom bg-cover bg-no-repeat ' >
 
 
-      <div className='pt-20 md:pt-40 lg:pt-0 lg:mt-40 2xl:mt-[15%] flex justify-center'>
+      <div className='fixed z-40'> <Header /></div>
+
+
+      <div  className='pt-20 md:pt-40 lg:pt-0 lg:mt-40 2xl:mt-[15%] flex justify-center'>
         <CarouselDemo />
       </div>
-     
+
       <div className='w-[100%] flex justify-center  absolute  top-[97%]'>
         < FaArrowDown className='hover:translate-y-2 transition-all duration-500 cursor-pointer text-brickred bg-lightgrey h-[40px] w-[40px] p-2 rounded-full' />
       </div>
-      
+
       <div className=' mt-[50vh] md:mt-[45vh] lg:mt-[30vh] 2xl:mt-[50vh] justify-evenly text-grey w-[100%] gap-y-5 flex flex-col md:flex-row lg:flex-row lg:gap-x-5 '>
 
 

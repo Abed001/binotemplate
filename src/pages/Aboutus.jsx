@@ -2,7 +2,12 @@ import React from 'react'
 import stab1 from '/images/stab1.png'
 import servicerightimg from '/images/servicerightimg.jpg'
 import { FcLike } from "react-icons/fc";
+
+
 function Aboutus() {
+
+ 
+
   return (
     <section className=' pt-[10%]'>
       <div className='  w-[100%] flex flex-col justify-center md:justify-center lg:flex-row lg:justify-between '>
@@ -16,7 +21,7 @@ function Aboutus() {
             <span className=' font-bold text-4xl uppercase'>our history</span></div>
           <p className='text-center md:text-center lg:text-left text-[0.7rem] min-w-[100%] leading-9'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem cum quasi minus deserunt impedit quis magnam voluptate. Laboriosam dolore ratione id illum labore quis nisi, totam, quia, perspiciatis autem nobis.
             Evenietoluptatum molestiae animi quasi praesentium quis totam corrupti eligendi veniam soluta harum, suscipit deleniti. Accusamus commodi beatae dolorem iure quia.</p>
-          <button className=' text-[0.7rem] px-8 py-4 bg-brickred text-white font-bold rounded-sm uppercase lg:mr-auto '>brows our work </button>
+          <button className=' hover:translate-y-2 transition-all duration-500 text-[0.7rem] px-8 py-4 bg-brickred text-white font-bold rounded-sm uppercase lg:mr-auto '>brows our work </button>
         </div>
       </div>
       {/*services*/}

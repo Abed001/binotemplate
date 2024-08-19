@@ -282,6 +282,7 @@ body {
 
 .navbar-scroll {
   background-color: #333; /* Set your desired background color */
-  padding: 15px; /* Set your desired padding */
+  padding: 10px; /* Set your desired padding */
+  transition: background-color 1s ease-in-out;
   /* Add additional styles for the scrolled state */
 }

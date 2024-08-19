@@ -39,9 +39,9 @@ function App() {
   return (
 
 
-    <div className='relative flex flex-col w-[100%] h-screen gap-y-5 '>
+    <div className='relative flex flex-col w-[100%]  gap-y-5 '>
 
-      <div id="link1" className='mb-[700px] md:mb-10 lg:mb-40'> <Home /></div>
+      <div id="link1" className='mb-[700px] md:mb-10 lg:mb-40 '> <Home /></div>
 
       <div id="link2" className='border-t-[0.5px] border-grayishblue mb-[200px] lg:mb-40'>
         <Aboutus />

@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <>
-      <div className='h-[100%] w-full bg-footerbg bg-cover bg-center bg-no-repeat'>
+      <div className='h-[100%] w-full bg-footerbg bg-cover bg-center bg-no-repeat pb-10'>
         <div className='text-center gap-y-5 flex flex-col justify-center items-center text-white  '>
           <p className='text-white pt-20 font-bold text-3xl lg:text-4xl uppercase'>Great Integrations with Others</p>
           <p className='max-w-[70%] lg:max-w-[90%] text-center text-[0.7rem] lg:text-[1rem] text-white'>Suspendisse sed eros mollis, tincidunt felis eget, interdum erat. Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.</p>

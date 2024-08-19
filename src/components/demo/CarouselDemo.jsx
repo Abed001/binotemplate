@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import gsap from 'gsap';
+import { useLayoutEffect, useRef } from "react"
 
 
 const slides = [
@@ -41,23 +43,43 @@ const slides = [
 
 ];
 const CarouselDemo = () => {
+
+  const comp = useRef(null)
+  const comp2 = useRef(null)
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline()
+      t1.from(["#carousel1", "#carousel2", "#carousel3", "#carousel4", "#button"], {
+        opacity: 0,
+        yPercent: -50,
+        duration: 1,
+        delay: 0.1,
+        stagger: 0.1,
+      })
+
+    }, comp)
+    return () => ctx.revert()
+  }, [])
+
+
   return (
-    <Carousel className=" text-white w-[80%]">
+    <Carousel ref={comp} className=" text-white w-[80%]">
       <CarouselContent>
         {slides.map((slide, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
               <Card className="border-0">
                 <CardContent className=" flex flex-col  items-center justify-center p-6">
-                  <span className="mb-5 lg:mb-0">{slide.title}</span>
-                  <h1 className="text-5xl text-center md:text-7xl lg:text-7xl font-semibold uppercase mb-5 tracking-wider">{slide.heading}</h1>
-                  <div className="line-with-dot mb-10">
+                  <span id="carousel1" className="mb-5 lg:mb-0">{slide.title}</span>
+                  <h1 id="carousel2" className="text-5xl text-center md:text-7xl lg:text-7xl font-semibold uppercase mb-5 tracking-wider">{slide.heading}</h1>
+                  <div id="carousel3" className="line-with-dot mb-10">
                     <div className="dot"></div>
                   </div>
-                  <span className="text-sm md:text-lg lg:text-lg text-center max-w-[500px]">{slide.description}</span>
+                  <span id="carousel4" className="text-sm md:text-lg lg:text-lg text-center max-w-[500px]">{slide.description}</span>
 
 
-                  <div className="text-[0.7rem] mt-5 flex justify-between text-white font-bold min-w-[300px] ">
+                  <div id="button" className="text-[0.7rem] mt-5 flex justify-between text-white font-bold min-w-[300px] ">
                     {slide.buttons.map((button, index) => (
                       <button key={index} className={button.style}>{button.text}</button>
                     ))}
@@ -71,8 +93,8 @@ const CarouselDemo = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="mt-20 hidden-on-phone">
-        <CarouselPrevious className="hover:bg-brickred text-white transition-all duration-500" />
+      <div  className="mt-20 hidden-on-phone">
+        <CarouselPrevious  className="hover:bg-brickred text-white transition-all duration-500" />
         <CarouselNext className="hover:bg-brickred text-white transition-all duration-500" /></div>
 
     </Carousel>

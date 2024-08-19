@@ -1,35 +1,36 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import { GalleryData } from "../GalleryData";
 import study from '/images/study.jpg'
 import CarouselPortfolio from '@/components/demo/CarouselPortfolio.jsx';
-
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';    
 
 
 
 const icons = [
     {
         image: "./images/like.png",
-        number: "200",
+        number: "1500",
         description: "user favourites",
 
     },
     {
         image: "./images/coffee.png",
-        number: "200",
+        number: "3000",
         description: "amazing features",
 
 
     },
     {
         image: "./images/medal.png",
-        number: "200",
+        number: "1850",
         description: "posts last year",
 
 
     },
     {
         image: "./images/team.png",
-        number: "200",
+        number: "2001",
         description: "total posts",
 
 
@@ -40,7 +41,26 @@ const icons = [
 
 
 function Portfolio() {
+
+    const [isCounterVisible, setIsCounterVisible] = useState(false);
     const [data, setData] = useState([]);
+
+    const countUpRef = useRef(null);
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+
+    useEffect(() => {
+        if (inView && !isCounterVisible) {
+            setIsCounterVisible(true);
+            if (countUpRef.current) {
+                countUpRef.current.start();
+            }
+        }
+    }, [inView, isCounterVisible]);
+
+
 
     useEffect(() => {
         setData(GalleryData);
@@ -106,13 +126,13 @@ function Portfolio() {
                         </div>
 
                         <img className='w-full object-center object-cover object-no-repeat ' src={study} alt="study" />
-                        
+
                     </div>
-                  
+
                 </div>
 
             </div>
-           
+
             <div className=' p-10 flex flex-col md:flex-row lg:flex-row justify-between md:justify-around lg:justify-around h-[100%] w-full bg-portbg bg-cover bg-center bg-no-repeat '>
                 {icons.map((icon, index) => (
                     <div className='mb-20 text-white flex flex-col justify-center items-center md:gap-y-5 lg:gap-y-5 '>
@@ -120,7 +140,19 @@ function Portfolio() {
                             <img className=" object-cover object-center object-no-repeat" src={icon.image} />
 
                         </div>
-                        <p className='mt-5 mb-2 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0 font-bold text-4xl'>{icon.number}</p>
+                        <div className='mt-5 mb-2 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0 font-bold text-4xl' ref={ref}>
+                            {isCounterVisible && (
+                                <CountUp
+                                    ref={countUpRef}
+                                    start={0}
+                                    end={icon.number}
+                                    duration={3}
+                                    separator=","
+                                    decimals={0}
+                                />
+                            )}
+                        </div>
+                       
                         <p className='font-bold' >{icon.description}</p>
 
                     </div>
