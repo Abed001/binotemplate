@@ -83,6 +83,7 @@ export default {
         '2xl': '1536px', // For larger screens
     },
     colors: {
+    
       'black-rgba': 'rgba(0, 0, 0, 0.54)',
       brickred: '#E74E3E',
       white: '#fff',

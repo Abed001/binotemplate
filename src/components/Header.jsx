@@ -42,36 +42,37 @@ function header() {
       <div className='w-[100%] h-3 fixed top-5 right-[-3px] mt-2 ml-10 z-20 lg:hidden flex justify-between items-center p-5'>
         <img className=' max-w-[100px]' src={logo} alt="logo" />
 
-        <Hamburger color='#fff' easing="ease-in" size={20} duration={0.3} toggled={isOpen} toggle={setOpen} />
+        <Hamburger color='#FF1A1A' easing="ease-in" size={20} duration={0.3} toggled={isOpen} toggle={setOpen} />
 
       </div>
       {isOpen &&
         <motion.div transition={{ duration: 0.7, ease: "easeInOut" }} initial={{ opacity: 0 }}
           animate={{ x: -5, opacity: 1 }} exit={{ opacity: 0 }} className='w-[50%] flex justify-start fixed z-10 top-5 right-0 h-[70vh]'>
 
-          <ul ref={ref} className=' font-semibold tracking-tighter lg:hidden  bg-brickred text-white cursor-pointer uppercase flex flex-col items-center py-20 w-[100%] gap-y-5 md:gap-y-10 md:text-[1.7rem]    '>
+          <ul ref={ref} className=' font-semibold tracking-tighter lg:hidden  bg-white border-4 border-brickred text-brickred cursor-pointer uppercase flex flex-col items-center py-20  w-[100%] gap-y-5 md:gap-y-10 md:text-[1.7rem]'>
+            
             <ScrollIntoView selector="#link1">
-              <p href="#link1" onClick={() => handleLinkClick('link1')} className={`${selectedLink === 'link1' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>Home</p>
+              <p href="#link1" onClick={() => handleLinkClick('link1')} className={`${selectedLink === 'link1' ? 'bg-brickred text-white  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>Home</p>
             </ScrollIntoView>
 
             <ScrollIntoView selector="#link2">
-              <p href="#link2" onClick={() => handleLinkClick('link2')} className={`${selectedLink === 'link2' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>About US</p>
+              <p href="#link2" onClick={() => handleLinkClick('link2')} className={`${selectedLink === 'link2' ? 'bg-brickred text-white  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>About US</p>
             </ScrollIntoView>
 
             <ScrollIntoView selector="#link3">
-              <p href="#link3" onClick={() => handleLinkClick('link3')} className={`${selectedLink === 'link3' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>portfolio</p>
+              <p href="#link3" onClick={() => handleLinkClick('link3')} className={`${selectedLink === 'link3' ? 'bg-brickred text-white  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>portfolio</p>
             </ScrollIntoView>
 
             <ScrollIntoView selector="#link4">
-              <p href="#link4" onClick={() => handleLinkClick('link4')} className={`${selectedLink === 'link4' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>pricing</p>
+              <p href="#link4" onClick={() => handleLinkClick('link4')} className={`${selectedLink === 'link4' ? 'bg-brickred text-white  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>pricing</p>
             </ScrollIntoView>
 
             <ScrollIntoView selector="#link5">
-              <p href="#link5" onClick={() => handleLinkClick('link5')} className={`${selectedLink === 'link5' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>team</p>
+              <p href="#link5" onClick={() => handleLinkClick('link5')} className={`${selectedLink === 'link5' ? 'bg-brickred text-white  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>team</p>
             </ScrollIntoView>
 
             <ScrollIntoView selector="#link6">
-              <p href="#link6" onClick={() => handleLinkClick('link6')} className={`${selectedLink === 'link6' ? 'bg-white text-brickred  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>contact</p>
+              <p href="#link6" onClick={() => handleLinkClick('link6')} className={`${selectedLink === 'link6' ? 'bg-brickred text-white  transition-all duration-500 px-4 py-2 rounded-lg' : ''}`}>contact</p>
             </ScrollIntoView >
 
           </ul >
